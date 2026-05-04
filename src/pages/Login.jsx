@@ -22,8 +22,8 @@ const Login = () => {
 
     try {
       const url = isLogin
-        ? "http://localhost:5000/api/auth/login"
-        : "http://localhost:5000/api/auth/register";
+        ? "https://bizsaathi.onrender.com/api/auth/login"
+        : "https://bizsaathi.onrender.com/api/auth/register";
 
       const res = await axios.post(url, form);
 
@@ -115,7 +115,7 @@ const Login = () => {
               try {
                 // 🔗 SEND TOKEN TO BACKEND
                 const res = await axios.post(
-                  "http://localhost:5000/api/auth/google",
+                  "https://bizsaathi.onrender.com/api/auth/google",
                   {
                     token: credentialResponse.credential,
                   }

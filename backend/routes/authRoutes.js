@@ -3,7 +3,7 @@ import User from "../models/User.js";
 import jwt from "jsonwebtoken";
 import { OAuth2Client } from "google-auth-library";
 
-const client = new OAuth2Client("Y988883024989-95qhdccob7udhusib8iclecdet16f6cl.apps.googleusercontent.com");
+const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 const router = express.Router();
 
 // 🔐 GENERATE TOKEN
@@ -56,7 +56,7 @@ router.post("/google", async (req, res) => {
 
     const ticket = await client.verifyIdToken({
       idToken: token,
-      audience: "Y988883024989-95qhdccob7udhusib8iclecdet16f6cl.apps.googleusercontent.com",
+      audience: "988883024989-95qhdccob7udhusib8iclecdet16f6cl.apps.googleusercontent.com",
     });
 
     const payload = ticket.getPayload();

@@ -13,7 +13,7 @@ const Invoices = () => {
 
   const fetchInvoices = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/invoice");
+      const res = await axios.get("https://bizsaathi.onrender.com/api/invoice");
       setInvoices(res.data);
     } catch (err) {
       console.error(err);

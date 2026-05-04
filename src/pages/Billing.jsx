@@ -76,7 +76,7 @@ const Billing = () => {
       };
 
       const res = await axios.post(
-        "http://localhost:5000/api/invoice",
+        "https://bizsaathi.onrender.com/api/invoice",
         invoiceData
       );
 

@@ -11,7 +11,7 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <GoogleOAuthProvider clientId="Y988883024989-95qhdccob7udhusib8iclecdet16f6cl.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId="988883024989-95qhdccob7udhusib8iclecdet16f6cl.apps.googleusercontent.com">
       <StoreProvider>
         <AuthProvider>
           <App />
